@@ -14,7 +14,7 @@ const input = (body) => {
     fs.mkdirSync(output)
     let filename = 'main.bundle.js'
     let inputFilename = `${folderPath}/test.js`
-    let script = `module.exports = ${body}`
+    let script = `window.bundletest = ${body}`
     fs.writeFileSync(inputFilename, script)
     return new Promise((resolve) => {
         webpack({
