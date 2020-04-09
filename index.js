@@ -12,6 +12,10 @@ router.get('/', async (ctx) => {
   ctx.body = 'hello'
 })
 
+router.get('/hello', async (ctx) => {
+  ctx.body = 'hello'
+})
+
 router.post('/create/bundle', koaBody(),
   async (ctx) => {
     console.log(ctx.request.body)
