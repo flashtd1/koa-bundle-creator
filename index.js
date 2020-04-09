@@ -19,5 +19,5 @@ router.post('/create/bundle', koaBody(),
  
 app.use(router.routes())
  
-app.listen(3000)
-console.log('服务开启成功：http://localhost:3000')
+app.listen(80)
+console.log('服务开启成功：http://localhost:80')
