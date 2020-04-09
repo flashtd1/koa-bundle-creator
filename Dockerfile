@@ -8,5 +8,10 @@ COPY package.json /app/
 WORKDIR /app
 
 RUN cnpm install 
+RUN mkdir input
+RUN mkdir output
+RUN chmod -R 777 input
+RUN chmod -R 777 output
+
 COPY . /app
 CMD ["npm", "run", "deploy"]
