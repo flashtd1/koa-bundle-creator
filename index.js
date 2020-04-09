@@ -8,6 +8,10 @@ const serve = require('koa-static')
  
 app.use(serve('output'))
 
+router.get('/', async (ctx) => {
+  ctx.body = 'hello'
+})
+
 router.post('/create/bundle', koaBody(),
   async (ctx) => {
     console.log(ctx.request.body)
